@@ -1,29 +1,48 @@
 {
-  "name": "template-nodejs",
-  "version": "1.0.0",
-  "description": "A project template for Node.js built in eslint, prettier and editorconfig.",
+  "name": "@yuzulabo/image-uploader-now",
   "author": "nzws <git@nzws.me>",
-  "license": "none",
+  "license": "MIT",
   "private": true,
   "scripts": {
     "lint:js": "eslint --ignore-path .gitignore \"**/*.js\" && prettier --check --ignore-path .gitignore \"**/*.js\"",
+    "lint:css": "prettier --check --ignore-path .gitignore \"**/*.scss\"",
     "lint:md": "prettier --check --ignore-path .gitignore \"**/*.md\"",
     "lint:json": "prettier --check --ignore-path .gitignore \"**/*.json\"",
     "lint": "npm-run-all lint:* -s",
     "format:js": "prettier --write --ignore-path .gitignore \"**/*.js\"",
+    "format:css": "prettier --write --ignore-path .gitignore \"**/*.scss\"",
     "format:md": "prettier --write --ignore-path .gitignore \"**/*.md\"",
     "format:json": "prettier --write --ignore-path .gitignore \"**/*.json\"",
-    "format": "npm-run-all format:* -s"
+    "format": "npm-run-all format:* -s",
+    "build": "parcel build src/client/index.html --no-source-maps",
+    "watch": "now dev",
+    "watch:parcel": "parcel serve src/client/index.html"
   },
   "devDependencies": {
     "@yuzulabo/eslint-config": "~1",
     "@yuzulabo/prettier-config": "~1",
     "eslint": "~6",
     "npm-run-all": "~4",
-    "prettier": "~1"
+    "parcel-bundler": "^1.12.3",
+    "prettier": "~1",
+    "sass": "^1.22.9"
   },
   "prettier": "@yuzulabo/prettier-config",
   "eslintConfig": {
-    "extends": "@yuzulabo"
+    "extends": "@yuzulabo",
+    "parserOptions": {
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    },
+    "rules": {
+      "no-unused-vars": 0
+    }
+  },
+  "dependencies": {
+    "aws-sdk": "^2.503.0",
+    "bootstrap": "^4.3.1",
+    "hyperapp": "~1",
+    "tinify": "^1.6.0-beta.2"
   }
 }
