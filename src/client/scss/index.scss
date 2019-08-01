@@ -1,1 +1,37 @@
 @import '~bootstrap/scss/bootstrap';
+
+.disabled {
+  filter: blur(2px);
+  pointer-events: none;
+}
+
+.textarea {
+  @extend .border;
+  position: relative;
+
+  textarea {
+    opacity: 0;
+    cursor: help;
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    content: 'Paste / Drag here to select a image...';
+  }
+}
+
+.sample {
+  @extend .img-fluid, .mt-4, .mb-4;
+  width: 500px;
+}
+
+.table {
+  img {
+    height: 50px;
+  }
+}

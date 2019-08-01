@@ -5,11 +5,22 @@
   "public": false,
   "builds": [
     { "src": "package.json", "use": "@now/static-build" },
-    { "src": "src/server/routes/*.js", "use": "@now/node-server" }
+    { "src": "src/server/routes/*.js", "use": "@now/node" }
   ],
   "github": { "silent": true },
   "routes": [
-    { "src": "/api/upload", "dest": "/src/server/routes/upload.js" },
-    { "src": "/api/oauth", "dest": "/src/server/routes/oauth.js" }
-  ]
+    { "src": "/api/upload", "dest": "/src/server/routes/api_upload.js" },
+    { "src": "/oauth/callback", "dest": "/src/server/routes/oauth_callback.js" }
+  ],
+  "env": {
+    "BUCKET_NAME": "@uploader_bucket_name",
+    "BUCKET_ENDPOINT": "@uploader_bucket_endpoint",
+    "BUCKET_URL": "@uploader_bucket_url",
+    "BUCKET_KEY": "@uploader_bucket_key",
+    "BUCKET_SECRET": "@uploader_bucket_secret",
+    "TINIFY_TOKEN": "@uploader_tinify_token",
+    "GITHUB_CLIENT_ID": "@uploader_github_client_id",
+    "GITHUB_CLIENT_SECRET": "@uploader_github_client_secret",
+    "GITHUB_USER_ID": "@uploader_github_user_id"
+  }
 }
