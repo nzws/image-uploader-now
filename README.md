@@ -2,7 +2,7 @@
 
 > Upload images to s3 easily using ZEIT Now, Lambda and Tinypng.
 
-![Imgur](https://imgur.com/Cjb8HLx)
+![Imgur](https://i.imgur.com/Cjb8HLx.png)
 
 ## Features
 

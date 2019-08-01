@@ -31,9 +31,12 @@ module.exports = (req, res) => {
           .json({ error: 'This account does not have a permission :(' });
       }
 
-      return res.send(
-        'Please access: ' + req.headers.host + '#' + body.access_token
-      );
+      res.statusCode = 307;
+      res.setHeader(
+        'Location',
+        'http://' + req.headers.host + '#' + body.access_token
+      ); //todo: https
+      res.end();
     }
   );
 };

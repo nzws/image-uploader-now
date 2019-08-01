@@ -10,7 +10,11 @@
   "github": { "silent": true },
   "routes": [
     { "src": "/api/upload", "dest": "/src/server/routes/api_upload.js" },
-    { "src": "/oauth/callback", "dest": "/src/server/routes/oauth_callback.js" }
+    {
+      "src": "/oauth/callback",
+      "dest": "/src/server/routes/oauth_callback.js"
+    },
+    { "src": "/login", "dest": "/src/server/routes/login.js" }
   ],
   "env": {
     "BUCKET_NAME": "@uploader_bucket_name",
