@@ -21,7 +21,7 @@
 - S3 keys
 - GitHub Account
 - GitHub oauth keys
-  > Callback URL is: https://example.com/oauth/callback
+  > Callback URL is: `https://<domain>/oauth/callback`
 
 ## How to build
 
