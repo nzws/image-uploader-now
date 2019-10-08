@@ -23,7 +23,7 @@
     "@yuzulabo/prettier-config": "~1",
     "eslint": "~6",
     "npm-run-all": "~4",
-    "parcel-bundler": "^1.12.3",
+    "parcel-bundler": "^1.12.4",
     "prettier": "~1",
     "sass": "^1.23.0"
   },
