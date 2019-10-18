@@ -40,7 +40,7 @@
     }
   },
   "dependencies": {
-    "aws-sdk": "^2.552.0",
+    "aws-sdk": "^2.553.0",
     "bootstrap": "^4.3.1",
     "exif-js": "^2.3.0",
     "file-type": "^12.3.0",
