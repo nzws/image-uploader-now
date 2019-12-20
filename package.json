@@ -43,7 +43,7 @@
     "aws-sdk": "^2.595.0",
     "bootstrap": "^4.4.1",
     "exif-js": "^2.3.0",
-    "file-type": "^12.4.1",
+    "file-type": "^12.4.2",
     "hyperapp": "~1",
     "multiparty": "^4.2.1",
     "tinify": "^1.6.0-beta.2"
